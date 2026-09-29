@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- Least Privilege Baseline:
+         Moodify Phase 3-R1 is strictly local-first on device.
+         LIVE_GEMINI_CALL_COUNT = 0
+         REAL_EXTERNAL_INTEGRATION_COUNT = 0
+         Zero network permissions declared. -->
 
     <application
+        android:name=".MoodifyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -14,7 +18,8 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.Moodify">
+            android:theme="@style/Theme.Moodify"
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
