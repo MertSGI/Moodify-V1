@@ -1,0 +1,6 @@
+{
+  "name": "Moodify",
+  "description": "Personal Context + Taste + Life Action Agent prototype that understands you gradually to make everyday life easier, richer, and less cognitively demanding.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
